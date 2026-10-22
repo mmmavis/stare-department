@@ -1,0 +1,475 @@
+const $ = (id) => document.getElementById(id),
+  NS = "http://www.w3.org/2000/svg";
+const paths = {
+  body: '<path d="M-64-81 Q-83-14-74 55 Q-65 102 0 106 Q68 103 75 55 Q83-20 53-84Z"/><path d="M-28-47 Q-42 19-22 66" fill="none" opacity=".3"/>',
+  round: '<ellipse rx="94" ry="97"/>',
+  head: '<path d="M-66 56 Q-85 19-65-36 L-78-65 -47-59 -52-79 -18-67 Q48-79 70-34 Q87 17 63 60 Q0 85-66 56Z"/>',
+  tall: '<path d="M-49 66 Q-76 5-51-76 L-26-69 -15-88 3-73 Q58-80 62-16 L52 66Z"/>',
+  beak: '<path d="M-66-22 Q-24-54 28-35 Q65-23 73 20 Q67 48 37 47 L-49 30 Q-73 19-66-22Z"/><path d="M-61 11 Q0 33 68 19 M42-22 Q53-10 51 3" fill="none"/><circle cx="31" cy="-18" r="3" fill="#29332f" stroke="none"/>',
+  bigbill:
+    '<path d="M-81-29 Q-25-66 65-29 L91 32 Q60 64-72 27Z"/><path d="M-73 9 Q14 31 85 24" fill="none"/>',
+  stare:
+    '<path d="M-27-10 Q0-18 27-10 L24 14 Q0 30-24 14Z" fill="#faf5d8"/><circle r="8" cy="4" fill="#252e2b"/><path d="M-30-13 L29-8" fill="none" stroke-width="6"/>',
+  sideeye:
+    '<ellipse rx="28" ry="22" fill="#faf5d8"/><circle cx="14" cy="2" r="8" fill="#252e2b"/><path d="M-29-13 L29-3" stroke-width="6"/>',
+  tiny: '<circle r="25" fill="#fffdf0"/><circle r="4" fill="#252e2b"/>',
+  sleepy:
+    '<path d="M-27-7 Q0 28 27-7Z" fill="#fffdf0"/><circle cy="3" r="6" fill="#252e2b"/><path d="M-29-7 L29-7" stroke-width="6"/>',
+  wing: '<path d="M-24-70 Q43-40 36 49 L21 72 13 47 4 76 -5 45 -17 66 Q-42 11-24-70Z"/><path d="M-16-29 Q9 6 13 47" fill="none" opacity=".4"/>',
+  spread:
+    '<path d="M-66 31 Q-40-63 67-42 L41-17 73-16 39 3 59 13 17 22 28 38Z"/>',
+  foot: '<path d="M-8-38 L8-38 10 12 38 27 Q43 35 29 34 L4 26 -16 36 Q-28 39-24 29 L-13 16 -40 24 Q-49 22-39 15 L-8 5Z"/>',
+  brow: '<path d="M-35-7 L35 7" fill="none" stroke-width="10" stroke-linecap="round"/>',
+  blush:
+    '<ellipse rx="28" ry="13" stroke="none"/><path d="M-12-5 L-16 5 M1-5 L-3 5 M14-5 L10 5" stroke="#fff" opacity=".5"/>',
+  sweat: '<path d="M0-32 Q-34 9-17 24 Q0 39 17 24 Q30 9 0-32Z"/>',
+  bubble:
+    '<path d="M-65-37 Q-65-55-40-55 H40 Q65-55 65-30 V19 Q65 37 40 37 H-18 L-43 60 -37 37 Q-65 37-65 19Z"/>',
+};
+const defs = [
+  ["body", "Classic bod", "Bodies", "#9da9aa"],
+  ["round", "Round fellow", "Bodies", "#aab6b4"],
+  ["head", "Bedhead", "Heads", "#aab6b4"],
+  ["tall", "Long thinker", "Heads", "#aab6b4"],
+  ["stare", "The stare", "Eyes", "#e4ddae"],
+  ["sideeye", "Side judgment", "Eyes", "#e4ddae"],
+  ["tiny", "No thoughts", "Eyes", "#e4ddae"],
+  ["sleepy", "Monday eyes", "Eyes", "#e4ddae"],
+  ["beak", "Signature bill", "Beaks", "#c5bd97"],
+  ["bigbill", "Big business", "Beaks", "#c5bd97"],
+  ["wing", "Folded wing", "Wings", "#839496"],
+  ["spread", "Jazz hands", "Wings", "#839496"],
+  ["foot", "Bird foot", "Feet", "#8e9280"],
+  ["brow", "Disapproval", "Extras", "#29332f"],
+  ["blush", "A little shy", "Extras", "#e9958b"],
+  ["sweat", "Under pressure", "Extras", "#82c5d5"],
+  ["bubble", "Speechless", "Extras", "#fffdf1"],
+];
+
+Object.assign(paths, {
+  pear: '<path d="M-35-88 Q35-107 48-52 Q57-20 84 34 Q114 112 0 108 Q-110 107-85 39 Q-55-16-35-88Z"/><path d="M-35 14 Q-47 53-27 72" fill="none" opacity=".3"/>',
+  bean: '<path d="M-39-96 Q34-116 56-60 Q31-21 69 19 Q102 103 19 111 Q-66 117-77 44 Q-91-32-39-96Z"/>',
+  longbody:
+    '<path d="M-40-110 Q0-136 40-110 Q60-56 48 106 Q0 130-48 106 Q-60-56-40-110Z"/><path d="M-19-70 Q-32 3-20 66" fill="none" opacity=".3"/>',
+  squarehead:
+    '<path d="M-72-48 Q-74-67-51-67 H49 Q72-67 72-46 V49 Q72 69 50 69 H-49 Q-72 69-72 49Z"/>',
+  fluffyhead:
+    '<path d="M-65 49 L-84 22 -69 6 -88-12 -65-22 -72-49 -44-44 -36-76 -12-57 7-81 20-58 48-70 49-45 75-42 66-17 86 1 68 19 77 47 48 54 Q0 83-65 49Z"/>',
+  flathead:
+    '<path d="M-83-25 L-61-47 -32-41 -16-55 3-42 Q79-54 89-6 Q96 49 7 52 Q-90 54-83-25Z"/>',
+  wideeye:
+    '<ellipse rx="27" ry="32" fill="#fffbed"/><circle cy="1" r="6" fill="#252e2b"/><path d="M-24-39 Q0-47 24-39" fill="none"/>',
+  angryeye:
+    '<path d="M-28-16 L28 3 Q20 32-17 19Z" fill="#faf5d8"/><circle cy="7" cx="2" r="7" fill="#252e2b"/><path d="M-32-18 L31 4" fill="none" stroke-width="7"/>',
+  closedeye:
+    '<path d="M-28 3 Q0 24 28 3 M-16 13 L-21 21 M0 18 V27 M16 13 L21 21" fill="none" stroke-width="4"/>',
+  sparkleeye:
+    '<ellipse rx="27" ry="29" fill="#fffbed"/><circle r="19" fill="#252e2b"/><path d="M-5-16 L-2-8 6-5 -2-2 -5 6 -8-2 -16-5 -8-8Z" fill="white" stroke="none"/><circle cx="9" cy="11" r="4" fill="white" stroke="none"/>',
+  stubbybill:
+    '<path d="M-40-25 Q0-44 36-21 L43 18 Q18 40-35 22Z"/><path d="M-34 9 Q1 22 38 12" fill="none"/><circle cx="18" cy="-12" r="3" fill="#29332f"/>',
+  longbill:
+    '<path d="M-96-18 Q-59-50 51-27 Q87-24 102 18 Q66 41-90 20Z"/><path d="M-89 9 Q7 27 96 16" fill="none"/><circle cx="51" cy="-12" r="3" fill="#29332f"/>',
+  hookbill:
+    '<path d="M-66-25 Q2-56 59-22 Q85 5 62 56 L43 31 Q-16 39-62 20Z"/><path d="M-58 10 Q-5 26 45 14 L62 56" fill="none"/><circle cx="31" cy="-16" r="3" fill="#29332f"/>',
+  upwing:
+    '<path d="M-22 65 Q-54 4-35-75 Q-26-94-17-63 L-9-91 Q3-101 5-65 L17-88 Q29-93 27-56 L39-65 Q53-64 37-18 L14 63Z"/><path d="M-15-32 L-6 35 M8-30 L2 36" fill="none" opacity=".4"/>',
+  tinywing: '<path d="M-22-28 Q20-38 34-2 L24 26 15 10 7 31 -3 10 -16 22Z"/>',
+  pointwing:
+    '<path d="M-53 31 Q-65-11-32-26 L71-23 Q91-17 69-9 L12 4 34 16 Q42 32 20 28 L-4 20 7 38 Q-4 48-25 27Z"/>',
+  webfoot: '<path d="M-8-40 H8 L11 3 45 32 10 23 0 40 -14 24 -43 32 -11 3Z"/>',
+  tiptoe:
+    '<path d="M-8-48 H8 L7 7 30 39 Q30 48 18 41 L-1 22 -13 42 Q-23 47-22 35 L-10 10Z"/>',
+  stomp:
+    '<path d="M-13-35 H13 V7 Q48 3 51 25 Q53 38 30 36 H-35 Q-53 33-43 20 L-13 4Z"/><path d="M23 21 L29 35 M5 23 L9 36" fill="none"/>',
+  heart: '<path d="M0 27 Q-48-2-25-23 Q-9-34 0-15 Q13-35 29-20 Q48 0 0 27Z"/>',
+  star: '<path d="M0-36 L10-10 37-9 16 8 22 35 0 20 -24 35 -16 8 -38-9 -11-10Z"/>',
+  tear: '<path d="M0-31 Q-29 10-18 24 Q0 40 18 24 Q29 10 0-31Z"/><path d="M-10 10 Q-16 19-8 23" fill="none" stroke="white"/>',
+  anger:
+    '<path d="M-26-24 Q-2-25-3-4 M26-24 Q2-25 3-4 M-26 24 Q-2 25-3 4 M26 24 Q2 25 3 4" fill="none" stroke="currentColor" stroke-width="7"/>',
+  crown:
+    '<path d="M-43-28 L-24-9 0-37 24-9 43-28 33 30 H-33Z"/><path d="M-32 17 H32" fill="none"/><circle cy="4" r="5" fill="#ee8660"/>',
+  glasses:
+    '<circle cx="-33" r="26" fill="none" stroke-width="6"/><circle cx="33" r="26" fill="none" stroke-width="6"/><path d="M-7-4 Q0-12 7-4 M-60-5 H-74 M60-5 H74" fill="none" stroke-width="6"/>',
+});
+defs.push(
+  ["pear", "Pear pressure", "Bodies", "#aab6b4"],
+  ["bean", "Bean counter", "Bodies", "#9da9aa"],
+  ["longbody", "Tall order", "Bodies", "#aab6b4"],
+  ["squarehead", "Blockhead", "Heads", "#aab6b4"],
+  ["fluffyhead", "Static situation", "Heads", "#aab6b4"],
+  ["flathead", "Wide thinker", "Heads", "#aab6b4"],
+  ["wideeye", "Seen too much", "Eyes", "#e4ddae"],
+  ["angryeye", "Deeply offended", "Eyes", "#e4ddae"],
+  ["closedeye", "Offline", "Eyes", "#e4ddae"],
+  ["sparkleeye", "Suspiciously happy", "Eyes", "#e4ddae"],
+  ["stubbybill", "Small talk", "Beaks", "#c5bd97"],
+  ["longbill", "Long story", "Beaks", "#c5bd97"],
+  ["hookbill", "The executive", "Beaks", "#c5bd97"],
+  ["upwing", "I have concerns", "Wings", "#839496"],
+  ["tinywing", "Tiny effort", "Wings", "#839496"],
+  ["pointwing", "Over there", "Wings", "#839496"],
+  ["webfoot", "Puddle patrol", "Feet", "#b1a77f"],
+  ["tiptoe", "Sneaky steps", "Feet", "#8e9280"],
+  ["stomp", "Big stomp", "Feet", "#8e9280"],
+  ["heart", "Secret affection", "Extras", "#e9958b"],
+  ["star", "Gold star", "Extras", "#e6c65f"],
+  ["tear", "One single tear", "Extras", "#82c5d5"],
+  ["anger", "Quiet fury", "Extras", "#d9715c"],
+  ["crown", "Department head", "Extras", "#e6c65f"],
+  ["glasses", "Peer reviewer", "Extras", "#29332f"],
+);
+
+let items = [],
+  selected = null,
+  history = [],
+  gesture = null;
+const key = "stare-department-v1";
+let uid = () => Math.random().toString(36).slice(2);
+function make(type, x, y, s = 1, flip = 1) {
+  return {
+    id: uid(),
+    type,
+    x,
+    y,
+    s,
+    flip,
+    r: 0,
+    color: defs.find((d) => d[0] === type)[3],
+  };
+}
+function starter() {
+  return [
+    make("foot", 260, 471, 0.8),
+    make("foot", 343, 471, 0.8, -1),
+    make("body", 300, 353, 1.1),
+    make("wing", 235, 353, 0.8),
+    make("wing", 366, 353, 0.8, -1),
+    make("head", 300, 221, 1.2),
+    make("beak", 301, 263, 1),
+    make("stare", 248, 213, 0.7),
+    make("stare", 350, 213, 0.7, -1),
+  ];
+}
+function randomLook() {
+  checkpoint();
+  const pick = (a) => a[Math.floor(Math.random() * a.length)],
+    range = (a, b) => a + Math.random() * (b - a);
+  const part = (cat) => pick(defs.filter((d) => d[2] === cat))[0];
+  const feather = pick([
+    "#aab6b4",
+    "#899caa",
+    "#b5b29b",
+    "#a4ad94",
+    "#baa8ba",
+    "#91b8b4",
+  ]);
+  const bill = pick(["#c5bd97", "#d7b478", "#d9aa8c", "#b9bc85"]);
+  const next = [];
+  function put(type, x, y, scale = 1, flip = 1, color = null, rotation = 0) {
+    const i = make(type, x, y, scale, flip);
+    if (color) i.color = color;
+    i.r = rotation;
+    next.push(i);
+    return i;
+  }
+  const foot = part("Feet"),
+    wing = part("Wings"),
+    eye = part("Eyes");
+  const bodyScale = range(0.85, 1.15),
+    headScale = range(0.85, 1.15),
+    eyeScale = range(0.6, 0.9),
+    wingScale = range(0.65, 0.95);
+  put(foot, 267, 474, range(0.7, 0.95));
+  put(foot, 337, 474, range(0.7, 0.95), -1);
+  put(part("Bodies"), 300, 361, bodyScale, 1, feather);
+  const wingAngle = range(-25, 25);
+  put(wing, 234, 350, wingScale, 1, feather, wingAngle);
+  put(wing, 366, 350, wingScale, -1, feather, -wingAngle);
+  put(part("Heads"), 300, 218, headScale, 1, feather, range(-7, 7));
+  put(part("Beaks"), 300, 260, range(0.8, 1.15), 1, bill);
+  put(eye, 255, 211, eyeScale);
+  put(eye, 345, 211, eyeScale, -1);
+  if (Math.random() < 0.25) put(part("Eyes"), 300, 170, eyeScale * 0.8);
+  const extra = pick([
+    "blush",
+    "sweat",
+    "heart",
+    "star",
+    "tear",
+    "anger",
+    "crown",
+    "glasses",
+    "brow",
+  ]);
+  if (extra === "crown") put(extra, 300, 123, 0.8);
+  else if (extra === "glasses") put(extra, 300, 211, 1.35);
+  else if (extra === "blush") {
+    put(extra, 240, 245, 0.6);
+    put(extra, 360, 245, 0.6);
+  } else if (extra === "brow") {
+    put(extra, 253, 184, 0.6);
+    put(extra, 347, 184, 0.6, -1);
+  } else put(extra, 402, 190, 0.75, 1, null, range(-15, 15));
+  items = next;
+  selected = null;
+  render();
+}
+$("random").onclick = randomLook;
+function checkpoint() {
+  history.push(JSON.stringify(items));
+  if (history.length > 60) history.shift();
+}
+function save() {
+  try {
+    localStorage.setItem(key, JSON.stringify(items));
+    $("saveStatus").textContent = "● All stares saved locally";
+  } catch {
+    $("saveStatus").textContent = "Local storage unavailable";
+  }
+}
+function transform(i) {
+  return `translate(${i.x} ${i.y}) rotate(${i.r}) scale(${i.s * i.flip} ${i.s})`;
+}
+function art(i) {
+  return `<g transform="${transform(i)}" color="${i.color}" fill="${i.color}" stroke="#29332f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">${paths[i.type]}</g>`;
+}
+function render() {
+  const c = $("canvas");
+  c.innerHTML = items
+    .map((i) => `<g data-id="${i.id}">${art(i)}</g>`)
+    .join("");
+  let i = items.find((i) => i.id === selected);
+  if (i) {
+    const g = c.querySelector(`[data-id="${i.id}"]`);
+    let b = g.getBBox();
+    c.insertAdjacentHTML(
+      "beforeend",
+      `<g><rect class="selection" x="${b.x - 8}" y="${b.y - 8}" width="${b.width + 16}" height="${b.height + 16}"/><path d="M${b.x + b.width / 2} ${b.y - 8} v-24" stroke="#df754e"/><circle class="handle rotate" data-handle="rotate" cx="${b.x + b.width / 2}" cy="${b.y - 32}" r="6"/><rect class="handle" data-handle="scale" x="${b.x + b.width + 3}" y="${b.y + b.height + 3}" width="10" height="10"/></g>`,
+    );
+    $("selectedName").textContent = defs.find((d) => d[0] === i.type)[1];
+    $("size").value = i.s * 100;
+    $("rotation").value = i.r;
+    $("color").value = i.color;
+    $("sizeVal").textContent = Math.round(i.s * 100) + "%";
+    $("rotVal").textContent = Math.round(i.r) + "°";
+  } else {
+    $("selectedName").textContent = "Pick a part";
+    $("sizeVal").textContent = "";
+    $("rotVal").textContent = "";
+  }
+  document
+    .querySelectorAll(".inspector input,.tools button")
+    .forEach((e) => (e.disabled = !i));
+  $("undo").disabled = !history.length;
+  save();
+}
+let cats = ["Eyes", "Beaks", "Heads", "Bodies", "Wings", "Feet", "Extras"];
+function library(cat) {
+  $("tabs").innerHTML = cats
+    .map((c) => `<button class="${c === cat ? "active" : ""}">${c}</button>`)
+    .join("");
+  $("tabs")
+    .querySelectorAll("button")
+    .forEach((b) => (b.onclick = () => library(b.textContent)));
+  $("parts").innerHTML = defs
+    .filter((d) => d[2] === cat)
+    .map(
+      (d) =>
+        `<button class="part" draggable="true" data-type="${d[0]}" title="Add ${d[1]}"><svg viewBox="-110 -115 220 230"><g color="${d[3]}" fill="${d[3]}" stroke="#29332f" stroke-width="3" stroke-linejoin="round">${paths[d[0]]}</g></svg><span>${d[1]}</span></button>`,
+    )
+    .join("");
+  $("parts")
+    .querySelectorAll("button")
+    .forEach((b) => {
+      b.onclick = () => add(b.dataset.type, 300, 300);
+      b.ondragstart = (e) =>
+        e.dataTransfer.setData("text/plain", b.dataset.type);
+    });
+}
+function add(t, x, y) {
+  checkpoint();
+  let i = make(t, x, y);
+  items.push(i);
+  selected = i.id;
+  render();
+}
+function point(e) {
+  let p = new DOMPoint(e.clientX, e.clientY);
+  return p.matrixTransform($("canvas").getScreenCTM().inverse());
+}
+$("stage").ondragover = (e) => e.preventDefault();
+$("stage").ondrop = (e) => {
+  e.preventDefault();
+  let t = e.dataTransfer.getData("text/plain");
+  if (Object.hasOwn(paths, t)) {
+    let p = point(e);
+    add(t, p.x, p.y);
+  }
+};
+$("canvas").onpointerdown = (e) => {
+  const handle = e.target.dataset.handle,
+    id = e.target.closest("[data-id]")?.dataset.id;
+  if (!handle) {
+    selected = id || null;
+    render();
+  }
+  const i = items.find((i) => i.id === selected);
+  if (!i) return;
+  checkpoint();
+  const p = point(e);
+  gesture = {
+    id: i.id,
+    mode: handle || "move",
+    p,
+    x: i.x,
+    y: i.y,
+    s: i.s,
+    r: i.r,
+    d: Math.hypot(p.x - i.x, p.y - i.y),
+    a: Math.atan2(p.y - i.y, p.x - i.x),
+  };
+  $("canvas").setPointerCapture(e.pointerId);
+};
+$("canvas").onpointermove = (e) => {
+  if (!gesture) return;
+  let p = point(e),
+    g = gesture,
+    i = items.find((i) => i.id === g.id);
+  if (g.mode === "move") {
+    i.x = Math.max(0, Math.min(600, g.x + p.x - g.p.x));
+    i.y = Math.max(0, Math.min(600, g.y + p.y - g.p.y));
+  } else if (g.mode === "scale")
+    i.s = Math.max(
+      0.2,
+      Math.min(3, (g.s * Math.hypot(p.x - i.x, p.y - i.y)) / Math.max(1, g.d)),
+    );
+  else
+    i.r =
+      ((g.r +
+        ((Math.atan2(p.y - i.y, p.x - i.x) - g.a) * 180) / Math.PI +
+        540) %
+        360) -
+      180;
+  render();
+};
+$("canvas").onpointerup = $("canvas").onpointercancel = () => (gesture = null);
+for (let id of ["size", "rotation", "color"]) {
+  $(id).onpointerdown = () => checkpoint();
+  $(id).onkeydown = (e) => {
+    if (e.key.startsWith("Arrow")) checkpoint();
+  };
+  $(id).oninput = () => {
+    let i = items.find((i) => i.id === selected);
+    if (!i) return;
+    i[id === "size" ? "s" : id === "rotation" ? "r" : "color"] =
+      id === "color"
+        ? $(id).value
+        : Number($(id).value) / (id === "size" ? 100 : 1);
+    render();
+  };
+}
+function action(a) {
+  let n = items.findIndex((i) => i.id === selected);
+  if (n < 0) return;
+  checkpoint();
+  let i = items[n];
+  if (a === "delete") {
+    items.splice(n, 1);
+    selected = null;
+  }
+  if (a === "duplicate") {
+    let j = { ...i, id: uid(), x: i.x + 18, y: i.y + 18 };
+    items.push(j);
+    selected = j.id;
+  }
+  if (a === "flip") i.flip *= -1;
+  if (a === "front" && n < items.length - 1)
+    [items[n], items[n + 1]] = [items[n + 1], items[n]];
+  if (a === "back" && n > 0)
+    [items[n], items[n - 1]] = [items[n - 1], items[n]];
+  if (a === "deselect") selected = null;
+  render();
+}
+document
+  .querySelectorAll("[data-action]")
+  .forEach((b) => (b.onclick = () => action(b.dataset.action)));
+$("undo").onclick = () => {
+  if (history.length) {
+    items = JSON.parse(history.pop());
+    selected = null;
+    render();
+  }
+};
+$("clear").onclick = () => {
+  checkpoint();
+  items = [];
+  selected = null;
+  render();
+};
+$("reset").onclick = () => {
+  checkpoint();
+  items = starter();
+  selected = null;
+  render();
+};
+document.onkeydown = (e) => {
+  if (e.target.matches("input")) return;
+  if ((e.ctrlKey || e.metaKey) && e.key === "z") {
+    e.preventDefault();
+    $("undo").click();
+  }
+  if (e.key === "Delete" || e.key === "Backspace") {
+    e.preventDefault();
+    action("delete");
+  }
+};
+function svgText() {
+  return `<svg xmlns="${NS}" width="1200" height="1200" viewBox="0 0 600 600">${items.map(art).join("")}</svg>`;
+}
+function download(blob, ext) {
+  let u = URL.createObjectURL(blob),
+    a = document.createElement("a");
+  a.href = u;
+  a.download = "the-stare-department." + ext;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(u), 1000);
+}
+$("svg").onclick = () =>
+  download(new Blob([svgText()], { type: "image/svg+xml" }), "svg");
+$("png").onclick = () => {
+  let u = URL.createObjectURL(new Blob([svgText()], { type: "image/svg+xml" })),
+    im = new Image();
+  im.onload = () => {
+    let c = document.createElement("canvas");
+    c.width = c.height = 1200;
+    c.getContext("2d").drawImage(im, 0, 0);
+    c.toBlob((b) => {
+      if (b) download(b, "png");
+      else $("exportStatus").textContent = "Export failed. Please try again.";
+    });
+    URL.revokeObjectURL(u);
+  };
+  im.onerror = () => {
+    $("exportStatus").textContent = "Export failed. Please try again.";
+    URL.revokeObjectURL(u);
+  };
+  im.src = u;
+};
+try {
+  let raw = JSON.parse(localStorage.getItem(key));
+  items =
+    Array.isArray(raw) &&
+    raw.every(
+      (i) =>
+        Object.hasOwn(paths, i.type) &&
+        /^#[0-9a-f]{6}$/i.test(i.color) &&
+        ["x", "y", "s", "r", "flip"].every((k) => Number.isFinite(i[k])) &&
+        /^[a-z0-9]+$/.test(i.id),
+    )
+      ? raw
+      : starter();
+} catch {
+  items = starter();
+}
+library("Eyes");
+render();

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' blob:; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Stare Department</title>
+    <meta
+      name="description"
+      content="Make a bird. Get judged. Build your own stern little shoebill and download it as a PNG or SVG."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="master-container">
+      <header>
+        <div class="brand"><span>◉</span>The Stare Department</div>
+        <div class="status" id="saveStatus">● All stares saved locally</div>
+      </header>
+      <section class="intro">
+        <div>
+          <div class="eyebrow">Unofficial mascot. Officially unimpressed.</div>
+          <h1>Make a bird. Get judged.</h1>
+          <p>A little strange. A little stern. Entirely yours.</p>
+        </div>
+        <div class="tag">
+          ZERO THOUGHTS. MAXIMUM STARE.
+          <span class="tag-arrow" aria-hidden="true">↙</span>
+        </div>
+      </section>
+      <main>
+        <aside class="panel">
+          <div class="panelhead">The parts department <small>01</small></div>
+          <div class="tabs" id="tabs"></div>
+          <div class="parts" id="parts"></div>
+          <div class="note">
+            Drag a part onto your bird.<br />Or click to add a little chaos.
+          </div>
+        </aside>
+        <section class="stagewrap">
+          <div class="stagebar">
+            <small>Your very serious creation</small>
+            <div>
+              <button class="plain" id="undo" title="Undo (Ctrl/Cmd Z)">
+                ↶ Undo
+              </button>
+              <button class="plain" id="clear">Clear</button>
+            </div>
+          </div>
+          <div class="stage" id="stage">
+            <svg
+              id="canvas"
+              viewBox="0 0 600 600"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Bird composition canvas"
+            ></svg>
+          </div>
+          <div class="stagefoot">
+            <span>Drag to move · Corner to resize · Top dot to rotate</span>
+            <div>
+              <button class="plain" id="random">✦ Random look</button>
+              <button class="plain" id="reset">↺ Starter bird</button>
+            </div>
+          </div>
+        </section>
+        <aside class="right">
+          <div class="panel">
+            <div class="panelhead">
+              Fine-feathered details <small>02</small>
+            </div>
+            <div class="inspector">
+              <h3 id="selectedName">Pick a part</h3>
+              <p class="inspector-note">Highly questionable improvements.</p>
+              <div class="control">
+                <label for="size">SIZE <span id="sizeVal"></span></label
+                ><input type="range" id="size" min="20" max="300" value="100" />
+              </div>
+              <div class="control">
+                <label for="rotation">ROTATION <span id="rotVal"></span></label
+                ><input
+                  type="range"
+                  id="rotation"
+                  min="-180"
+                  max="180"
+                  value="0"
+                />
+              </div>
+              <div class="control">
+                <label for="color">A SPLASH OF PERSONALITY</label
+                ><input type="color" id="color" value="#a2adb0" />
+              </div>
+              <div class="tools">
+                <button data-action="duplicate">＋ Duplicate</button
+                ><button data-action="flip">↔ Flip</button
+                ><button data-action="front">↑ Forward</button
+                ><button data-action="back">↓ Backward</button
+                ><button data-action="delete">× Delete</button
+                ><button data-action="deselect">✓ Done</button>
+              </div>
+            </div>
+          </div>
+          <div class="download">
+            <h3>Release the stare.</h3>
+            <p>
+              Transparent background. Full personality.<br />Ready for wherever
+              your team hangs out.
+            </p>
+            <button id="png">↓ Download PNG</button
+            ><button id="svg">↓ Download SVG</button>
+            <p id="exportStatus" role="status"></p>
+          </div>
+        </aside>
+      </main>
+      <footer>
+        <span>THE STARE DEPARTMENT © No birds were impressed.</span
+        ><span>Made for your flock.</span>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

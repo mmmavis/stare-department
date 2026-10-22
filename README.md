@@ -28,7 +28,3 @@ Publish the repository root with GitHub Pages. The entry point is `index.html`.
 
 Bird designs stay in the browser. There is no analytics or backend service.
 The page loads DM Sans and Space Grotesk from Google Fonts.
-
-## Local files
-
-`work/` contains scratch files and previous theme backups and is excluded by `.gitignore`.

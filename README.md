@@ -12,6 +12,7 @@ Open `index.html` in a browser. No build step or backend is required.
 - `styles.css`: all styles, including the Google Fonts import.
 - `script.js`: the bird editor, local saving, and PNG/SVG export.
 - `favicon.svg`: browser tab icon.
+- `og-image.png`: link preview image for Slack and social media (1200 × 630).
 
 ## Features
 

@@ -132,6 +132,12 @@ Object.assign(paths, {
     '<path d="M-6-4 L-21 -49 M8-4 L24.5 -46" fill="none" stroke-width="18" stroke-linecap="round"/><path d="M-6-4 L-21 -49 M8-4 L24.5 -46" fill="none" stroke="#e0a85a" stroke-width="12" stroke-linecap="round"/><path d="M-9 -6 L-23.2 -48 M-3 -6 L-18 -48.8 M5 -6 L20.8 -46.5 M11 -6 L26.8 -45" fill="none" stroke="#b97f3c" stroke-width="1.8"/><g fill="#fffbed" stroke="none"><circle cx="-10.3" cy="-11.1" r="1.3"/><circle cx="-8.2" cy="-15.9" r="0.9"/><circle cx="-13.8" cy="-20.0" r="1.3"/><circle cx="-15.0" cy="-24.2" r="1.1"/><circle cx="-16.4" cy="-28.2" r="1.1"/><circle cx="-15.5" cy="-33.5" r="0.9"/><circle cx="-17.4" cy="-39.6" r="0.9"/><circle cx="-19.8" cy="-43.6" r="0.9"/><circle cx="12.3" cy="-9.7" r="1.1"/><circle cx="12.7" cy="-15.5" r="1.3"/><circle cx="15.6" cy="-18.9" r="0.9"/><circle cx="15.9" cy="-23.0" r="0.9"/><circle cx="17.7" cy="-27.9" r="0.9"/><circle cx="19.9" cy="-32.5" r="1.1"/><circle cx="20.7" cy="-37.4" r="1.1"/><circle cx="24.6" cy="-40.1" r="1.1"/></g><path d="M24 2 Q40 2 38 16 Q36 26 22 24" fill="none" stroke-width="5"/><path d="M-26-6 H26 L22 34 Q21 40 14 40 H-14 Q-21 40-22 34Z" fill="#fffbed"/><ellipse cy="-6" rx="26" ry="7"/><path d="M-23-3 Q-21 0-21 3 Q-22 8-18 8 Q-14 8-16 3 Q-16 0-14-3Z M-5-3 Q-2 3-3 9 Q-5 16-1 18 Q5 19 4 12 Q3 6 6-3Z M11-3 Q14 1 13 5 Q12 10 15.5 10 Q19 9 17 5 Q16 1 18-3Z" stroke="none"/>',
   sangria:
     '<path d="M-30-30 Q-58-30-56 0 Q-54 26-32 26" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-30-30 Q-58-30-56 0 Q-54 26-32 26" fill="none" stroke="#e6eeee" stroke-width="7" stroke-linecap="round"/><path d="M-24-46 H22 L34-52 Q30-44 26-38 Q44-8 34 22 Q30 46 14 46 H-14 Q-30 46-34 22 Q-44-8-24-46Z" fill="#e6eeee"/><path d="M29.3-32 Q43-5 34 22 Q30 46 14 46 H-14 Q-30 46-34 22 Q-42.1-2.4-30.5-32 Q0-26 29.3-32Z" stroke="none"/><circle cx="8" cy="8" r="14" fill="#f39a3d" stroke-width="2.5"/><circle cx="8" cy="8" r="10.9" fill="#fbc46d" stroke="none"/><path d="M8 8 L18.9 8.0 M8 8 L15.7 15.7 M8 8 L8.0 18.9 M8 8 L0.3 15.7 M8 8 L-2.9 8.0 M8 8 L0.3 0.3 M8 8 L8.0 -2.9 M8 8 L15.7 0.3" fill="none" stroke="#fde9c2" stroke-width="1.5"/><circle cx="-17" cy="-12" r="9" fill="#f39a3d" stroke-width="2.5"/><circle cx="-17" cy="-12" r="7.0" fill="#fbc46d" stroke="none"/><path d="M-17 -12 L-10.0 -12.0 M-17 -12 L-12.0 -7.0 M-17 -12 L-17.0 -5.0 M-17 -12 L-22.0 -7.0 M-17 -12 L-24.0 -12.0 M-17 -12 L-22.0 -17.0 M-17 -12 L-17.0 -19.0 M-17 -12 L-12.0 -17.0" fill="none" stroke="#fde9c2" stroke-width="1.5"/><g fill="#3c4a8a" stroke-width="2"><circle cx="-14" cy="24" r="5.5"/><circle cx="-2" cy="33" r="5"/><circle cx="23" cy="-16" r="5"/></g><path d="M10-30 Q22-40 28-28 Q18-22 10-30Z" fill="#6fae5a" stroke-width="2"/><path d="M11-30 Q19-31 26-29" fill="none" stroke="#3f7a35" stroke-width="1.5"/><path d="M26-22 Q34 0 27 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity=".6"/><path d="M-24-46 H22 L34-52 Q30-44 26-38 Q44-8 34 22 Q30 46 14 46 H-14 Q-30 46-34 22 Q-44-8-24-46Z" fill="none"/><path d="M-15-47.5 A14 14 0 0 1 13-47.5Z" fill="#f39a3d" stroke-width="2.5"/><path d="M-11.8-50.3 A11.2 11.2 0 0 1 9.8-50.3Z" fill="#fbc46d" stroke="none"/><path d="M-1-50.3 L-6.7-54.3 M-1-50.3 L-1-57.3 M-1-50.3 L4.7-54.3" fill="none" stroke="#fde9c2" stroke-width="1.5"/>',
+  duck: '<path d="M40-4 Q39 18 28 28 Q14 38-6 36 Q-34 34-36 14 Q-37 4-27 0 Q-31-6-30-15 Q-30-31-14-31 Q2-31 2-15 Q2-6-3 0 Q14 7 27 3 Q35 0 40-4Z"/><path d="M-28-17 Q-45-18-45-11 Q-41-4-26-9Z" fill="#f39a3d"/><circle cx="-17" cy="-20" r="2.8" fill="#29332f" stroke="none"/><path d="M2 12 Q12 26 27 13 Q16 16 2 12Z" fill="#e0b43a" stroke-width="2"/>',
+  laptop:
+    '<rect x="-34" y="-40" width="68" height="46" rx="4"/><rect x="-28" y="-34" width="56" height="34" rx="2" fill="#a9cdee"/><path d="M-21-25 H9 M-21-17 H17 M-21-9 H3" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/><path d="M-38 6 H38 L46 18 Q46 22 42 22 H-42 Q-46 22-46 18Z" fill="#c8ccd4"/><path d="M-10 14 H10" fill="none" stroke-width="2.5" stroke-linecap="round"/>',
+  balloon:
+    '<path d="M0-8 Q-9 10 4 26 Q13 40 2 56" fill="none" stroke-width="2"/><path d="M-4-7 L0-13 L4-7Z"/><ellipse cy="-40" rx="24" ry="28"/><path d="M-13-55 Q-17-47-15-38" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity=".6"/>',
+  tote: '<path d="M-18-12 Q-18-44 0-44 Q18-44 18-12" fill="none" stroke-width="9" stroke-linecap="round"/><path d="M-18-12 Q-18-44 0-44 Q18-44 18-12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M-30-14 H30 L35 38 Q35 42 31 42 H-31 Q-35 42-35 38Z"/><rect x="-12" y="2" width="24" height="24" rx="3" fill="#d5ff3f" stroke-width="2.5"/><circle cy="14" r="7" fill="none" stroke-width="2.5"/><circle cy="14" r="3" fill="#29332f" stroke="none"/>',
 });
 defs.push(
   ["pear", "Pear pressure", "Bodies", "#aab6b4"],
@@ -175,6 +181,10 @@ defs.push(
   ["necktie", "Business casual", "Extras", "#c94f4f"],
   ["lanyard", "Conference mode", "Extras", "#ac91ff"],
   ["headset", "On mute", "Extras", "#4a4c5a"],
+  ["laptop", "Per my last email", "Extras", "#4a4c5a"],
+  ["tote", "Conference swag", "Extras", "#f1eee2"],
+  ["balloon", "Ship day", "Extras", "#f17f55"],
+  ["duck", "Debugging", "Extras", "#f6c94c"],
   ["mug", "Running on fumes", "Extras", "#f1eee2"],
   ["fish", "Lunch break", "Extras", "#7fa7b8"],
   ["boba", "Boba run", "Extras", "#d8b48a"],
@@ -282,6 +292,10 @@ function randomLook() {
     "spider",
     "churros",
     "sangria",
+    "duck",
+    "laptop",
+    "balloon",
+    "tote",
   ]);
   if (extra === "crown") put(extra, 300, 123, 0.8);
   else if (extra === "partyhat")
@@ -299,6 +313,10 @@ function randomLook() {
   else if (extra === "donut") put(extra, 424, 350, 0.9);
   else if (extra === "witchhat") put(extra, 300, 128, 1.1);
   else if (extra === "spider") put(extra, 404, 176, 0.9);
+  else if (extra === "duck") put(extra, 428, 352, 0.9);
+  else if (extra === "laptop") put(extra, 432, 360, 0.8);
+  else if (extra === "balloon") put(extra, 420, 326, 0.95);
+  else if (extra === "tote") put(extra, 430, 362, 0.85);
   else if (extra === "sangria") put(extra, 438, 345, 0.95);
   else if (extra === "churros") put(extra, 422, 345, 0.85);
   else if (extra === "glasses") put(extra, 300, 211, 1.35);

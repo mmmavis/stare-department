@@ -130,6 +130,8 @@ Object.assign(paths, {
     '<path d="M0-96 V-14" fill="none" stroke-width="2"/><path d="M-9 0 Q-26-16-36-4 M-12 6 Q-30 0-40 12 M-11 12 Q-26 18-32 32 M-6 17 Q-14 30-12 42 M9 0 Q26-16 36-4 M12 6 Q30 0 40 12 M11 12 Q26 18 32 32 M6 17 Q14 30 12 42" fill="none" stroke-width="4"/><circle cy="8" r="15"/><circle cy="-10" r="10"/><circle cx="-4" cy="-12" r="2.5" fill="white" stroke="none"/><circle cx="4" cy="-12" r="2.5" fill="white" stroke="none"/>',
   churros:
     '<path d="M-6-4 L-21 -49 M8-4 L24.5 -46" fill="none" stroke-width="18" stroke-linecap="round"/><path d="M-6-4 L-21 -49 M8-4 L24.5 -46" fill="none" stroke="#e0a85a" stroke-width="12" stroke-linecap="round"/><path d="M-9 -6 L-23.2 -48 M-3 -6 L-18 -48.8 M5 -6 L20.8 -46.5 M11 -6 L26.8 -45" fill="none" stroke="#b97f3c" stroke-width="1.8"/><g fill="#fffbed" stroke="none"><circle cx="-10.3" cy="-11.1" r="1.3"/><circle cx="-8.2" cy="-15.9" r="0.9"/><circle cx="-13.8" cy="-20.0" r="1.3"/><circle cx="-15.0" cy="-24.2" r="1.1"/><circle cx="-16.4" cy="-28.2" r="1.1"/><circle cx="-15.5" cy="-33.5" r="0.9"/><circle cx="-17.4" cy="-39.6" r="0.9"/><circle cx="-19.8" cy="-43.6" r="0.9"/><circle cx="12.3" cy="-9.7" r="1.1"/><circle cx="12.7" cy="-15.5" r="1.3"/><circle cx="15.6" cy="-18.9" r="0.9"/><circle cx="15.9" cy="-23.0" r="0.9"/><circle cx="17.7" cy="-27.9" r="0.9"/><circle cx="19.9" cy="-32.5" r="1.1"/><circle cx="20.7" cy="-37.4" r="1.1"/><circle cx="24.6" cy="-40.1" r="1.1"/></g><path d="M24 2 Q40 2 38 16 Q36 26 22 24" fill="none" stroke-width="5"/><path d="M-26-6 H26 L22 34 Q21 40 14 40 H-14 Q-21 40-22 34Z" fill="#fffbed"/><ellipse cy="-6" rx="26" ry="7"/><path d="M-23-3 Q-21 0-21 3 Q-22 8-18 8 Q-14 8-16 3 Q-16 0-14-3Z M-5-3 Q-2 3-3 9 Q-5 16-1 18 Q5 19 4 12 Q3 6 6-3Z M11-3 Q14 1 13 5 Q12 10 15.5 10 Q19 9 17 5 Q16 1 18-3Z" stroke="none"/>',
+  sangria:
+    '<path d="M-30-30 Q-58-30-56 0 Q-54 26-32 26" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-30-30 Q-58-30-56 0 Q-54 26-32 26" fill="none" stroke="#e6eeee" stroke-width="7" stroke-linecap="round"/><path d="M-24-46 H22 L34-52 Q30-44 26-38 Q44-8 34 22 Q30 46 14 46 H-14 Q-30 46-34 22 Q-44-8-24-46Z" fill="#e6eeee"/><path d="M29.3-32 Q43-5 34 22 Q30 46 14 46 H-14 Q-30 46-34 22 Q-42.1-2.4-30.5-32 Q0-26 29.3-32Z" stroke="none"/><circle cx="8" cy="8" r="14" fill="#f39a3d" stroke-width="2.5"/><circle cx="8" cy="8" r="10.9" fill="#fbc46d" stroke="none"/><path d="M8 8 L18.9 8.0 M8 8 L15.7 15.7 M8 8 L8.0 18.9 M8 8 L0.3 15.7 M8 8 L-2.9 8.0 M8 8 L0.3 0.3 M8 8 L8.0 -2.9 M8 8 L15.7 0.3" fill="none" stroke="#fde9c2" stroke-width="1.5"/><circle cx="-17" cy="-12" r="9" fill="#f39a3d" stroke-width="2.5"/><circle cx="-17" cy="-12" r="7.0" fill="#fbc46d" stroke="none"/><path d="M-17 -12 L-10.0 -12.0 M-17 -12 L-12.0 -7.0 M-17 -12 L-17.0 -5.0 M-17 -12 L-22.0 -7.0 M-17 -12 L-24.0 -12.0 M-17 -12 L-22.0 -17.0 M-17 -12 L-17.0 -19.0 M-17 -12 L-12.0 -17.0" fill="none" stroke="#fde9c2" stroke-width="1.5"/><g fill="#3c4a8a" stroke-width="2"><circle cx="-14" cy="24" r="5.5"/><circle cx="-2" cy="33" r="5"/><circle cx="23" cy="-16" r="5"/></g><path d="M10-30 Q22-40 28-28 Q18-22 10-30Z" fill="#6fae5a" stroke-width="2"/><path d="M11-30 Q19-31 26-29" fill="none" stroke="#3f7a35" stroke-width="1.5"/><path d="M26-22 Q34 0 27 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity=".6"/><path d="M-24-46 H22 L34-52 Q30-44 26-38 Q44-8 34 22 Q30 46 14 46 H-14 Q-30 46-34 22 Q-44-8-24-46Z" fill="none"/><path d="M-15-47.5 A14 14 0 0 1 13-47.5Z" fill="#f39a3d" stroke-width="2.5"/><path d="M-11.8-50.3 A11.2 11.2 0 0 1 9.8-50.3Z" fill="#fbc46d" stroke="none"/><path d="M-1-50.3 L-6.7-54.3 M-1-50.3 L-1-57.3 M-1-50.3 L4.7-54.3" fill="none" stroke="#fde9c2" stroke-width="1.5"/>',
 });
 defs.push(
   ["pear", "Pear pressure", "Bodies", "#aab6b4"],
@@ -178,6 +180,7 @@ defs.push(
   ["boba", "Boba run", "Extras", "#d8b48a"],
   ["donut", "Treat yourself", "Extras", "#f4a3c4"],
   ["churros", "Churro o'clock", "Extras", "#5a3726"],
+  ["sangria", "Pitcher perfect", "Extras", "#8e1f3a"],
   ["spider", "Bug in production", "Extras", "#3b3448"],
   // Retired: kept so older saved birds still load; not shown in any tab.
   ["tear", "One single tear", "Retired", "#82c5d5"],
@@ -278,6 +281,7 @@ function randomLook() {
     "witchhat",
     "spider",
     "churros",
+    "sangria",
   ]);
   if (extra === "crown") put(extra, 300, 123, 0.8);
   else if (extra === "partyhat")
@@ -295,6 +299,7 @@ function randomLook() {
   else if (extra === "donut") put(extra, 424, 350, 0.9);
   else if (extra === "witchhat") put(extra, 300, 128, 1.1);
   else if (extra === "spider") put(extra, 404, 176, 0.9);
+  else if (extra === "sangria") put(extra, 438, 345, 0.95);
   else if (extra === "churros") put(extra, 422, 345, 0.85);
   else if (extra === "glasses") put(extra, 300, 211, 1.35);
   else if (extra === "blush") {

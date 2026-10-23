@@ -90,6 +90,10 @@ Object.assign(paths, {
     '<path d="M-43-28 L-24-9 0-37 24-9 43-28 33 30 H-33Z"/><path d="M-32 17 H32" fill="none"/><circle cy="4" r="5" fill="#ee8660"/>',
   glasses:
     '<circle cx="-33" r="26" fill="none" stroke-width="6"/><circle cx="33" r="26" fill="none" stroke-width="6"/><path d="M-7-4 Q0-12 7-4 M-60-5 H-74 M60-5 H74" fill="none" stroke-width="6"/>',
+  partyhat:
+    '<path d="M0-52 L34 34 Q0 46-34 34Z"/><path d="M-15-8 Q0-3 15-8 M-25 16 Q0 23 25 16" fill="none" stroke="#fffbed" stroke-width="5"/><circle cy="-56" r="9" fill="#fffbed"/>',
+  mug: '<path d="M24-10 Q48-12 46 8 Q44 26 22 22" fill="none" stroke-width="13"/><path d="M24-10 Q48-12 46 8 Q44 26 22 22" fill="none" stroke="currentColor" stroke-width="6"/><path d="M-30-24 H30 L26 28 Q25 36 16 36 H-16 Q-25 36-26 28Z"/><ellipse cy="-24" rx="30" ry="6" fill="#6b4a36"/><path d="M-10-38 Q-18-47-10-55 Q-2-63-10-72 M10-38 Q2-47 10-55 Q18-63 10-72" fill="none" stroke-width="4" opacity=".45"/>',
+  fish: '<path d="M-8-14 Q2-32 16-12Z"/><path d="M-48 0 Q-20-24 18-12 L44-28 Q38 0 44 28 L18 12 Q-20 24-48 0Z"/><path d="M-16-12 Q-9 0-16 12" fill="none"/><circle cx="-31" cy="-4" r="4" fill="#252e2b" stroke="none"/>',
 });
 defs.push(
   ["pear", "Pear pressure", "Bodies", "#aab6b4"],
@@ -117,6 +121,9 @@ defs.push(
   ["anger", "Quiet fury", "Extras", "#d9715c"],
   ["crown", "Department head", "Extras", "#e6c65f"],
   ["glasses", "Peer reviewer", "Extras", "#29332f"],
+  ["partyhat", "Mandatory fun", "Extras", "#ac91ff"],
+  ["mug", "Running on fumes", "Extras", "#f1eee2"],
+  ["fish", "Lunch break", "Extras", "#7fa7b8"],
 );
 
 let items = [],
@@ -200,8 +207,15 @@ function randomLook() {
     "crown",
     "glasses",
     "brow",
+    "partyhat",
+    "mug",
+    "fish",
   ]);
   if (extra === "crown") put(extra, 300, 123, 0.8);
+  else if (extra === "partyhat")
+    put(extra, 300, 112, 0.85, 1, null, range(-12, 12));
+  else if (extra === "mug") put(extra, 420, 345, 0.7);
+  else if (extra === "fish") put(extra, 300, 292, 0.75);
   else if (extra === "glasses") put(extra, 300, 211, 1.35);
   else if (extra === "blush") {
     put(extra, 240, 245, 0.6);
@@ -235,9 +249,7 @@ function art(i) {
 }
 function render() {
   const c = $("canvas");
-  c.innerHTML = items
-    .map((i) => `<g data-id="${i.id}">${art(i)}</g>`)
-    .join("");
+  c.innerHTML = items.map((i) => `<g data-id="${i.id}">${art(i)}</g>`).join("");
   let i = items.find((i) => i.id === selected);
   if (i) {
     const g = c.querySelector(`[data-id="${i.id}"]`);

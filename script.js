@@ -65,6 +65,14 @@ Object.assign(paths, {
     '<path d="M-28 3 Q0 24 28 3 M-16 13 L-21 21 M0 18 V27 M16 13 L21 21" fill="none" stroke-width="4"/>',
   sparkleeye:
     '<ellipse rx="27" ry="29" fill="#fffbed"/><circle r="19" fill="#252e2b"/><path d="M-5-16 L-2-8 6-5 -2-2 -5 6 -8-2 -16-5 -8-8Z" fill="white" stroke="none"/><circle cx="9" cy="11" r="4" fill="white" stroke="none"/>',
+  eyeroll:
+    '<ellipse rx="27" ry="24" fill="#faf5d8"/><circle cy="-13" r="8" fill="#252e2b"/><path d="M-24 11 Q0 20 24 11" fill="none" stroke-width="4"/>',
+  spiraleye:
+    '<circle r="26" fill="#fffbed"/><path d="M0 0 Q4-4 6 0 Q8 8 0 10 Q-11 11-12 0 Q-12-15 2-16 Q18-16 19 0 Q19 20 0 21" fill="none" stroke="#252e2b" stroke-width="3.5"/>',
+  hearteye:
+    '<path d="M0 25 Q-34 3-21-16 Q-9-28 0-12 Q9-28 21-16 Q34 3 0 25Z"/><circle cx="-12" cy="-11" r="4" fill="white" stroke="none"/>',
+  puppyeye:
+    '<ellipse rx="27" ry="28" fill="#fffbed"/><circle cy="4" r="16" fill="#252e2b"/><circle cx="-5" cy="-2" r="5" fill="white" stroke="none"/><circle cx="6" cy="10" r="2.5" fill="white" stroke="none"/><path d="M-18 22 Q0 31 18 22" fill="none" stroke="#82c5d5" stroke-width="4"/>',
   stubbybill:
     '<path d="M-40-25 Q0-44 36-21 L43 18 Q18 40-35 22Z"/><path d="M-34 9 Q1 22 38 12" fill="none"/><circle cx="18" cy="-12" r="3" fill="#29332f"/>',
   longbill:
@@ -106,6 +114,10 @@ defs.push(
   ["angryeye", "Deeply offended", "Eyes", "#e4ddae"],
   ["closedeye", "Offline", "Eyes", "#e4ddae"],
   ["sparkleeye", "Suspiciously happy", "Eyes", "#e4ddae"],
+  ["eyeroll", "Per my last email", "Eyes", "#e4ddae"],
+  ["spiraleye", "Too many meetings", "Eyes", "#e4ddae"],
+  ["hearteye", "Weirdly into it", "Eyes", "#e9585f"],
+  ["puppyeye", "Deadline extension?", "Eyes", "#e4ddae"],
   ["stubbybill", "Small talk", "Beaks", "#c5bd97"],
   ["longbill", "Long story", "Beaks", "#c5bd97"],
   ["hookbill", "The executive", "Beaks", "#c5bd97"],

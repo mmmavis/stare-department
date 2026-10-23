@@ -19,7 +19,7 @@ const paths = {
   spread:
     '<path d="M-66 31 Q-40-63 67-42 L41-17 73-16 39 3 59 13 17 22 28 38Z"/>',
   foot: '<path d="M-8-38 L8-38 10 12 38 27 Q43 35 29 34 L4 26 -16 36 Q-28 39-24 29 L-13 16 -40 24 Q-49 22-39 15 L-8 5Z"/>',
-  brow: '<path d="M-35-7 L35 7" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>',
+  brow: '<path d="M-35-7 L35 7" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>',
   blush:
     '<ellipse rx="28" ry="13" stroke="none"/><path d="M-12-5 L-16 5 M1-5 L-3 5 M14-5 L10 5" stroke="#fff" opacity=".5"/>',
   sweat: '<path d="M0-32 Q-34 9-17 24 Q0 39 17 24 Q30 9 0-32Z"/>',
@@ -99,7 +99,7 @@ Object.assign(paths, {
   star: '<path d="M0-36 L10-10 37-9 16 8 22 35 0 20 -24 35 -16 8 -38-9 -11-10Z"/>',
   tear: '<path d="M0-31 Q-29 10-18 24 Q0 40 18 24 Q29 10 0-31Z"/><path d="M-10 10 Q-16 19-8 23" fill="none" stroke="white"/>',
   anger:
-    '<path d="M-26-24 Q-2-25-3-4 M26-24 Q2-25 3-4 M-26 24 Q-2 25-3 4 M26 24 Q2 25 3 4" fill="none" stroke="currentColor" stroke-width="7"/>',
+    '<path d="M-18-36 Q0-25 18-36 M-18 36 Q0 25 18 36 M-36-18 Q-25 0-36 18 M36-18 Q25 0 36 18" fill="none" stroke-width="15" stroke-linecap="round"/><path d="M-18-36 Q0-25 18-36 M-18 36 Q0 25 18 36 M-36-18 Q-25 0-36 18 M36-18 Q25 0 36 18" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>',
   crown:
     '<path d="M-43-28 L-24-9 0-37 24-9 43-28 33 30 H-33Z"/><path d="M-32 17 H32" fill="none"/><circle cy="4" r="5" fill="#ee8660"/>',
   glasses:
@@ -160,7 +160,7 @@ defs.push(
   ["heart", "Secret affection", "Extras", "#e9958b"],
   ["star", "Gold star", "Extras", "#e6c65f"],
   ["tear", "One single tear", "Extras", "#82c5d5"],
-  ["anger", "Quiet fury", "Extras", "#d9715c"],
+  ["anger", "Quiet fury", "Extras", "#e0503f"],
   ["crown", "Department head", "Extras", "#e6c65f"],
   ["partyhat", "Mandatory fun", "Extras", "#ac91ff"],
   ["beanie", "Remote worker", "Extras", "#d9715c"],

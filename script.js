@@ -108,6 +108,26 @@ Object.assign(paths, {
     '<path d="M0-52 L34 34 Q0 46-34 34Z"/><path d="M-15-8 Q0-3 15-8 M-25 16 Q0 23 25 16" fill="none" stroke="#fffbed" stroke-width="5"/><circle cy="-56" r="9" fill="#fffbed"/>',
   mug: '<path d="M24-10 Q48-12 46 8 Q44 26 22 22" fill="none" stroke-width="13"/><path d="M24-10 Q48-12 46 8 Q44 26 22 22" fill="none" stroke="currentColor" stroke-width="6"/><path d="M-30-24 H30 L26 28 Q25 36 16 36 H-16 Q-25 36-26 28Z"/><ellipse cy="-24" rx="30" ry="6" fill="#6b4a36"/><path d="M-10-38 Q-18-47-10-55 Q-2-63-10-72 M10-38 Q2-47 10-55 Q18-63 10-72" fill="none" stroke-width="4" opacity=".45"/>',
   fish: '<path d="M-8-14 Q2-32 16-12Z"/><path d="M-48 0 Q-20-24 18-12 L44-28 Q38 0 44 28 L18 12 Q-20 24-48 0Z"/><path d="M-16-12 Q-9 0-16 12" fill="none"/><circle cx="-31" cy="-4" r="4" fill="#252e2b" stroke="none"/>',
+  necktie:
+    '<path d="M-7-32 L-15 30 0 47 15 30 7-32Z"/><path d="M-11-46 H11 L7-32 H-7Z"/><path d="M-9-6 L8-18 M-12 16 L11 2" fill="none" stroke="#fffbed" stroke-width="3" opacity=".7"/>',
+  lanyard:
+    '<path d="M-32-62 L-4-4 M32-62 L4-4" fill="none" stroke-width="11"/><path d="M-32-62 L-4-4 M32-62 L4-4" fill="none" stroke="currentColor" stroke-width="5"/><rect x="-6" y="-6" width="12" height="12" rx="2" fill="#a5a5b4"/><rect x="-24" y="6" width="48" height="58" rx="4" fill="#fffbed"/><rect x="-16" y="14" width="13" height="15" rx="2" fill="#b6a5ec" stroke-width="2"/><path d="M3 18 H16 M3 25 H12 M-16 40 H16 M-16 49 H8" fill="none" stroke-width="3"/>',
+  headset:
+    '<path d="M-74 0 Q-74-84 0-84 Q74-84 74 0" fill="none" stroke-width="13"/><path d="M-74 0 Q-74-84 0-84 Q74-84 74 0" fill="none" stroke="currentColor" stroke-width="6"/><path d="M-78 22 Q-74 54-40 60" fill="none" stroke-width="5"/><ellipse cx="-36" cy="60" rx="8" ry="6" fill="#29332f"/><rect x="-90" y="-16" width="24" height="40" rx="10"/><rect x="66" y="-16" width="24" height="40" rx="10"/>',
+  beanie:
+    '<path d="M-58 8 Q-60-56 0-58 Q60-56 58 8Z"/><circle cy="-62" r="13" fill="#fffbed"/><path d="M-64 4 H64 Q67 18 62 28 H-62 Q-67 18-64 4Z"/><path d="M-44 7 V25 M-22 7 V26 M0 7 V26 M22 7 V26 M44 7 V25" fill="none" opacity=".35"/>',
+  cap: '<path d="M-82 36 Q-90-28-26-55 Q-70-30-57 26Z"/><path d="M-57 26 Q-70-30-26-55 Q16-58 38-37 Q50-18 47 9 Q-8 8-57 26Z" fill="#f4f3ee"/><ellipse cx="-24" cy="-57" rx="9" ry="4.5"/><path d="M-57 26 Q10 4 47 9 Q78 12 88 30 Q89 39 78 39 Q30 53-57 26Z"/>',
+  boba: '<path d="M6-30 L20-74" fill="none" stroke-width="12"/><path d="M6-30 L20-74" fill="none" stroke="#d9d2c3" stroke-width="6"/><path d="M-26-30 H26 L20 46 Q19 52 13 52 H-13 Q-19 52-20 46Z" fill="#fffbed"/><path d="M-25-18 H25 L20 46 Q19 52 13 52 H-13 Q-19 52-20 46Z" stroke="none"/><path d="M-26-30 H26 L20 46 Q19 52 13 52 H-13 Q-19 52-20 46Z" fill="none"/><g fill="#3b2a2a" stroke="none"><circle cx="-11" cy="42" r="5"/><circle cx="1" cy="44" r="5"/><circle cx="12" cy="41" r="5"/><circle cx="-6" cy="33" r="5"/><circle cx="7" cy="32" r="5"/><circle cx="-14" cy="30" r="4.5"/></g><path d="M-30-32 H30" fill="none" stroke-width="6"/><path d="M-17-10 L-13 36" fill="none" stroke="white" stroke-width="3" opacity=".5"/>',
+  propeller:
+    '<path d="M0-58 Q-59.74 -56 -58 10 L-38.7 10 Q-39.861 -56 0-58Z" fill="#f4a3a3"/><path d="M0-58 Q-39.861 -56 -38.7 10 L-19.3 10 Q-19.879 -56 0-58Z" fill="#f7c59f"/><path d="M0-58 Q-19.879 -56 -19.3 10 L0 10 Q0 -56 0-58Z" fill="#f6e3a1"/><path d="M0-58 Q0 -56 0 10 L19.3 10 Q19.879 -56 0-58Z" fill="#b8e0b0"/><path d="M0-58 Q19.879 -56 19.3 10 L38.7 10 Q39.861 -56 0-58Z" fill="#a9cdee"/><path d="M0-58 Q39.861 -56 38.7 10 L58 10 Q59.74 -56 0-58Z" fill="#c9b3f0"/><path d="M-62 4 H62 Q65 14 60 20 H-60 Q-65 14-62 4Z"/><path d="M0-58 V-72" fill="none" stroke-width="4"/><ellipse cx="-20" cy="-76" rx="20" ry="6"/><ellipse cx="20" cy="-76" rx="20" ry="6"/><circle cy="-75" r="5" fill="#29332f" stroke="none"/>',
+  donut:
+    '<path d="M-44 0 A44 36 0 1 0 44 0 A44 36 0 1 0-44 0Z M-12 0 A12 9 0 1 1 12 0 A12 9 0 1 1-12 0Z" fill="#d9a86c" fill-rule="evenodd"/><path d="M-38 0 Q-40-26-12-30 Q4-34 18-28 Q40-24 38 0 Q42 14 30 22 Q22 30 8 26 Q-4 32-16 26 Q-34 24-36 12 Q-42 6-38 0Z M-15 0 A15 11 0 1 1 15 0 A15 11 0 1 1-15 0Z" fill-rule="evenodd"/><path d="M-28 -12 l6 -4" stroke="#f4a3a3" stroke-width="4" stroke-linecap="round"/><path d="M-12 -22 l6 3" stroke="#a9cdee" stroke-width="4" stroke-linecap="round"/><path d="M8 -24 l-5 4" stroke="#f6e3a1" stroke-width="4" stroke-linecap="round"/><path d="M24 -16 l6 3" stroke="#b8e0b0" stroke-width="4" stroke-linecap="round"/><path d="M30 2 l2 6" stroke="#c9b3f0" stroke-width="4" stroke-linecap="round"/><path d="M20 16 l-6 3" stroke="#f7c59f" stroke-width="4" stroke-linecap="round"/><path d="M2 20 l6 -2" stroke="#a9cdee" stroke-width="4" stroke-linecap="round"/><path d="M-18 16 l5 4" stroke="#c9b3f0" stroke-width="4" stroke-linecap="round"/><path d="M-30 4 l1 -6" stroke="#b8e0b0" stroke-width="4" stroke-linecap="round"/><path d="M-4 -14 l5 2" stroke="#f7c59f" stroke-width="4" stroke-linecap="round"/>',
+  witchhat:
+    '<ellipse cy="20" rx="72" ry="12"/><path d="M-38 18 Q-30-20-10-56 Q6-82 34-74 Q12-62 6-40 Q24 0 38 18Z"/><path d="M-37 6 Q0 14 37 6 L38 18 Q0 26-38 18Z" fill="#f17f55"/><rect x="-8" y="6" width="16" height="14" rx="2" fill="none" stroke="#e6c65f" stroke-width="3"/>',
+  spider:
+    '<path d="M0-96 V-14" fill="none" stroke-width="2"/><path d="M-9 0 Q-26-16-36-4 M-12 6 Q-30 0-40 12 M-11 12 Q-26 18-32 32 M-6 17 Q-14 30-12 42 M9 0 Q26-16 36-4 M12 6 Q30 0 40 12 M11 12 Q26 18 32 32 M6 17 Q14 30 12 42" fill="none" stroke-width="4"/><circle cy="8" r="15"/><circle cy="-10" r="10"/><circle cx="-4" cy="-12" r="2.5" fill="white" stroke="none"/><circle cx="4" cy="-12" r="2.5" fill="white" stroke="none"/>',
+  churros:
+    '<path d="M-6-4 L-26-64 M8-4 L30-60" fill="none" stroke-width="18" stroke-linecap="round"/><path d="M-6-4 L-26-64 M8-4 L30-60" fill="none" stroke="#e0a85a" stroke-width="12" stroke-linecap="round"/><path d="M-9-6 L-28-62 M-3-6 L-23-63 M5-6 L26-60 M11-6 L32-58" fill="none" stroke="#b97f3c" stroke-width="1.8"/><g fill="white" stroke="none"><circle cx="-16" cy="-40" r="2"/><circle cx="-22" cy="-54" r="2"/><circle cx="-12" cy="-26" r="2"/><circle cx="20" cy="-36" r="2"/><circle cx="25" cy="-50" r="2"/><circle cx="15" cy="-22" r="2"/></g><path d="M24 2 Q40 2 38 16 Q36 26 22 24" fill="none" stroke-width="5"/><path d="M-26-6 H26 L22 34 Q21 40 14 40 H-14 Q-21 40-22 34Z" fill="#fffbed"/><ellipse cy="-6" rx="26" ry="7"/><path d="M-14-2 Q-12 6-9 2 M10-1 Q12 8 15 1" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>',
 });
 defs.push(
   ["pear", "Pear pressure", "Bodies", "#aab6b4"],
@@ -136,15 +156,27 @@ defs.push(
   ["webfoot", "Puddle patrol", "Feet", "#b1a77f"],
   ["tiptoe", "Sneaky steps", "Feet", "#8e9280"],
   ["stomp", "Big stomp", "Feet", "#8e9280"],
+  // Extras continue in groups: feelings, hats, gear, snacks, critters.
   ["heart", "Secret affection", "Extras", "#e9958b"],
   ["star", "Gold star", "Extras", "#e6c65f"],
   ["tear", "One single tear", "Extras", "#82c5d5"],
   ["anger", "Quiet fury", "Extras", "#d9715c"],
   ["crown", "Department head", "Extras", "#e6c65f"],
-  ["glasses", "Peer reviewer", "Extras", "#29332f"],
   ["partyhat", "Mandatory fun", "Extras", "#ac91ff"],
+  ["beanie", "Remote worker", "Extras", "#d9715c"],
+  ["cap", "Casual Friday", "Extras", "#4a9ee0"],
+  ["propeller", "Big ideas", "Extras", "#4a9ee0"],
+  ["witchhat", "Resting witch face", "Extras", "#4b3a6b"],
+  ["glasses", "Peer reviewer", "Extras", "#29332f"],
+  ["necktie", "Business casual", "Extras", "#c94f4f"],
+  ["lanyard", "Conference mode", "Extras", "#ac91ff"],
+  ["headset", "On mute", "Extras", "#4a4c5a"],
   ["mug", "Running on fumes", "Extras", "#f1eee2"],
   ["fish", "Lunch break", "Extras", "#7fa7b8"],
+  ["boba", "Boba run", "Extras", "#d8b48a"],
+  ["donut", "Treat yourself", "Extras", "#f4a3c4"],
+  ["churros", "Churro o'clock", "Extras", "#5a3726"],
+  ["spider", "Bug in production", "Extras", "#3b3448"],
 );
 
 let items = [],
@@ -231,12 +263,34 @@ function randomLook() {
     "partyhat",
     "mug",
     "fish",
+    "necktie",
+    "lanyard",
+    "headset",
+    "beanie",
+    "cap",
+    "boba",
+    "propeller",
+    "donut",
+    "witchhat",
+    "spider",
+    "churros",
   ]);
   if (extra === "crown") put(extra, 300, 123, 0.8);
   else if (extra === "partyhat")
     put(extra, 300, 112, 0.85, 1, null, range(-12, 12));
   else if (extra === "mug") put(extra, 420, 345, 0.7);
   else if (extra === "fish") put(extra, 300, 292, 0.75);
+  else if (extra === "necktie") put(extra, 300, 366, 1.05);
+  else if (extra === "lanyard") put(extra, 300, 366, 0.85);
+  else if (extra === "headset") put(extra, 300, 205, 1);
+  else if (extra === "beanie") put(extra, 300, 160, 1.12);
+  else if (extra === "cap") put(extra, 300, 152, 1.05);
+  else if (extra === "boba") put(extra, 422, 345, 0.85);
+  else if (extra === "propeller") put(extra, 300, 160, 1.12);
+  else if (extra === "donut") put(extra, 424, 350, 0.9);
+  else if (extra === "witchhat") put(extra, 300, 128, 1.1);
+  else if (extra === "spider") put(extra, 404, 176, 0.9);
+  else if (extra === "churros") put(extra, 422, 345, 0.85);
   else if (extra === "glasses") put(extra, 300, 211, 1.35);
   else if (extra === "blush") {
     put(extra, 240, 245, 0.6);

@@ -98,6 +98,8 @@ Object.assign(paths, {
   heart: '<path d="M0 27 Q-48-2-25-23 Q-9-34 0-15 Q13-35 29-20 Q48 0 0 27Z"/>',
   star: '<path d="M0-36 L10-10 37-9 16 8 22 35 0 20 -24 35 -16 8 -38-9 -11-10Z"/>',
   tear: '<path d="M0-31 Q-29 10-18 24 Q0 40 18 24 Q29 10 0-31Z"/><path d="M-10 10 Q-16 19-8 23" fill="none" stroke="white"/>',
+  cloud:
+    '<path d="M2 4 L-9 26 H1 L-5 46 L14 18 H4 L11 4Z" fill="#f6c94c"/><path d="M-40 10 Q-54 10-53-4 Q-52-17-38-17 Q-35-34-17-33 Q-5-45 11-37 Q29-42 35-24 Q51-22 51-6 Q50 10 36 10Z"/><path d="M-30-6 Q-24-14-14-12" fill="none" stroke="white" stroke-width="3" opacity=".5"/>',
   anger:
     '<path d="M-18-36 Q0-25 18-36 M-18 36 Q0 25 18 36 M-36-18 Q-25 0-36 18 M36-18 Q25 0 36 18" fill="none" stroke-width="15" stroke-linecap="round"/><path d="M-18-36 Q0-25 18-36 M-18 36 Q0 25 18 36 M-36-18 Q-25 0-36 18 M36-18 Q25 0 36 18" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>',
   crown:
@@ -159,7 +161,7 @@ defs.push(
   // Extras continue in groups: feelings, hats, gear, snacks, critters.
   ["heart", "Secret affection", "Extras", "#e9958b"],
   ["star", "Gold star", "Extras", "#e6c65f"],
-  ["tear", "One single tear", "Extras", "#82c5d5"],
+  ["cloud", "Mood: cloudy", "Extras", "#8a8f9c"],
   ["anger", "Quiet fury", "Extras", "#e0503f"],
   ["crown", "Department head", "Extras", "#e6c65f"],
   ["partyhat", "Mandatory fun", "Extras", "#ac91ff"],
@@ -177,6 +179,8 @@ defs.push(
   ["donut", "Treat yourself", "Extras", "#f4a3c4"],
   ["churros", "Churro o'clock", "Extras", "#5a3726"],
   ["spider", "Bug in production", "Extras", "#3b3448"],
+  // Retired: kept so older saved birds still load; not shown in any tab.
+  ["tear", "One single tear", "Retired", "#82c5d5"],
 );
 
 let items = [],
@@ -255,7 +259,7 @@ function randomLook() {
     "sweat",
     "heart",
     "star",
-    "tear",
+    "cloud",
     "anger",
     "crown",
     "glasses",
@@ -287,6 +291,7 @@ function randomLook() {
   else if (extra === "cap") put(extra, 300, 152, 1.05);
   else if (extra === "boba") put(extra, 422, 345, 0.85);
   else if (extra === "propeller") put(extra, 300, 160, 1.12);
+  else if (extra === "cloud") put(extra, 318, 92, 0.8);
   else if (extra === "donut") put(extra, 424, 350, 0.9);
   else if (extra === "witchhat") put(extra, 300, 128, 1.1);
   else if (extra === "spider") put(extra, 404, 176, 0.9);

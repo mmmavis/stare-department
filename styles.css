@@ -559,12 +559,13 @@ input[type="color"] {
   color: #f1eff9;
   min-height: 42px;
 }
-.tools button:hover:enabled {
+.tools button:hover:not([aria-disabled]) {
   background: #393347;
   border-color: var(--violet);
 }
 button:disabled,
-input:disabled {
+input:disabled,
+[aria-disabled="true"] {
   opacity: 0.45;
   cursor: default;
 }
@@ -637,4 +638,30 @@ input:focus-visible {
 }
 .inspector-note {
   font-size: 14px;
+}
+.pick-hint {
+  margin: 6px 0 0;
+  color: var(--acid);
+  font-size: 14px;
+  font-weight: 700;
+}
+.pick-hint:empty {
+  display: none;
+}
+#selectedName.nudge {
+  animation: nudge 0.5s ease;
+  color: var(--acid);
+}
+@keyframes nudge {
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #selectedName.nudge {
+    animation: none;
+  }
 }

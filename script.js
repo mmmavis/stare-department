@@ -340,13 +340,22 @@ function render() {
     $("sizeVal").textContent = Math.round(i.s * 100) + "%";
     $("rotVal").textContent = Math.round(i.r) + "°";
   } else {
-    $("selectedName").textContent = "Pick a part";
+    $("selectedName").textContent = "Pick a part on your bird";
     $("sizeVal").textContent = "";
     $("rotVal").textContent = "";
   }
+  if (i) {
+    $("pickHint").textContent = "";
+    $("selectedName").classList.remove("nudge");
+  }
+  // aria-disabled instead of disabled, so taps still reach nudge().
   document
     .querySelectorAll(".inspector input,.tools button")
-    .forEach((e) => (e.disabled = !i));
+    .forEach((e) =>
+      i
+        ? e.removeAttribute("aria-disabled")
+        : e.setAttribute("aria-disabled", "true"),
+    );
   $("undo").disabled = !history.length;
   save();
 }
@@ -440,14 +449,50 @@ $("canvas").onpointermove = (e) => {
   render();
 };
 $("canvas").onpointerup = $("canvas").onpointercancel = () => (gesture = null);
+let nudgeTimer;
+function nudge() {
+  const name = $("selectedName");
+  name.classList.remove("nudge");
+  void name.offsetWidth; // restart the animation on repeat taps
+  name.classList.add("nudge");
+  $("pickHint").textContent = "Tap a part on your bird first.";
+  clearTimeout(nudgeTimer);
+  nudgeTimer = setTimeout(() => {
+    name.classList.remove("nudge");
+    $("pickHint").textContent = "";
+  }, 2500);
+  // On stacked layouts the bird can be scrolled out of view.
+  const r = $("stage").getBoundingClientRect();
+  if (r.bottom < 0 || r.top > innerHeight)
+    $("stage").scrollIntoView({ block: "center" });
+}
 for (let id of ["size", "rotation", "color"]) {
-  $(id).onpointerdown = () => checkpoint();
+  $(id).onpointerdown = (e) => {
+    if (!selected) {
+      e.preventDefault();
+      return nudge();
+    }
+    checkpoint();
+  };
+  $(id).onclick = (e) => {
+    if (!selected) e.preventDefault(); // stops the colour picker opening
+  };
   $(id).onkeydown = (e) => {
+    if (!selected) {
+      if (e.key !== "Tab") {
+        e.preventDefault();
+        nudge();
+      }
+      return;
+    }
     if (e.key.startsWith("Arrow")) checkpoint();
   };
   $(id).oninput = () => {
     let i = items.find((i) => i.id === selected);
-    if (!i) return;
+    if (!i) {
+      $(id).value = $(id).defaultValue; // touch drags can still move the thumb
+      return nudge();
+    }
     i[id === "size" ? "s" : id === "rotation" ? "r" : "color"] =
       id === "color"
         ? $(id).value
@@ -457,7 +502,7 @@ for (let id of ["size", "rotation", "color"]) {
 }
 function action(a) {
   let n = items.findIndex((i) => i.id === selected);
-  if (n < 0) return;
+  if (n < 0) return nudge();
   checkpoint();
   let i = items[n];
   if (a === "delete") {

@@ -332,11 +332,21 @@ footer {
   }
   .parts {
     display: flex;
-    max-height: 130px;
-    overflow: auto;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-top: 4px;
   }
   .part {
-    min-width: 95px;
+    flex: 0 0 104px;
+  }
+  .part svg {
+    height: 60px;
+  }
+  .part span {
+    display: block;
+    line-height: 1.25;
+    overflow-wrap: break-word;
   }
   .right {
     display: block;

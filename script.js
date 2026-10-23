@@ -9,17 +9,17 @@ const paths = {
   bigbill:
     '<path d="M-81-29 Q-25-66 65-29 L91 32 Q60 64-72 27Z"/><path d="M-73 9 Q14 31 85 24" fill="none"/>',
   stare:
-    '<path d="M-27-10 Q0-18 27-10 L24 14 Q0 30-24 14Z" fill="#faf5d8"/><circle r="8" cy="4" fill="#252e2b"/><path d="M-30-13 L29-8" fill="none" stroke-width="6"/>',
+    '<path d="M-27-10 Q0-18 27-10 L24 14 Q0 30-24 14Z" fill="#faf5d8"/><circle r="8" cy="4" fill="currentColor"/><path d="M-30-13 L29-8" fill="none" stroke-width="6"/>',
   sideeye:
-    '<ellipse rx="28" ry="22" fill="#faf5d8"/><circle cx="14" cy="2" r="8" fill="#252e2b"/><path d="M-29-13 L29-3" stroke-width="6"/>',
-  tiny: '<circle r="25" fill="#fffdf0"/><circle r="4" fill="#252e2b"/>',
+    '<ellipse rx="28" ry="22" fill="#faf5d8"/><circle cx="14" cy="2" r="8" fill="currentColor"/><path d="M-29-13 L29-3" stroke-width="6"/>',
+  tiny: '<circle r="25" fill="#fffdf0"/><circle r="4" fill="currentColor"/>',
   sleepy:
-    '<path d="M-27-7 Q0 28 27-7Z" fill="#fffdf0"/><circle cy="3" r="6" fill="#252e2b"/><path d="M-29-7 L29-7" stroke-width="6"/>',
+    '<path d="M-27-7 Q0 28 27-7Z" fill="#fffdf0"/><circle cy="3" r="6" fill="currentColor"/><path d="M-29-7 L29-7" stroke-width="6"/>',
   wing: '<path d="M-24-70 Q43-40 36 49 L21 72 13 47 4 76 -5 45 -17 66 Q-42 11-24-70Z"/><path d="M-16-29 Q9 6 13 47" fill="none" opacity=".4"/>',
   spread:
     '<path d="M-66 31 Q-40-63 67-42 L41-17 73-16 39 3 59 13 17 22 28 38Z"/>',
   foot: '<path d="M-8-38 L8-38 10 12 38 27 Q43 35 29 34 L4 26 -16 36 Q-28 39-24 29 L-13 16 -40 24 Q-49 22-39 15 L-8 5Z"/>',
-  brow: '<path d="M-35-7 L35 7" fill="none" stroke-width="10" stroke-linecap="round"/>',
+  brow: '<path d="M-35-7 L35 7" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>',
   blush:
     '<ellipse rx="28" ry="13" stroke="none"/><path d="M-12-5 L-16 5 M1-5 L-3 5 M14-5 L10 5" stroke="#fff" opacity=".5"/>',
   sweat: '<path d="M0-32 Q-34 9-17 24 Q0 39 17 24 Q30 9 0-32Z"/>',
@@ -31,10 +31,10 @@ const defs = [
   ["round", "Round fellow", "Bodies", "#aab6b4"],
   ["head", "Bedhead", "Heads", "#aab6b4"],
   ["tall", "Long thinker", "Heads", "#aab6b4"],
-  ["stare", "The stare", "Eyes", "#e4ddae"],
-  ["sideeye", "Side judgment", "Eyes", "#e4ddae"],
-  ["tiny", "No thoughts", "Eyes", "#e4ddae"],
-  ["sleepy", "Monday eyes", "Eyes", "#e4ddae"],
+  ["stare", "The stare", "Eyes", "#252e2b"],
+  ["sideeye", "Side judgment", "Eyes", "#252e2b"],
+  ["tiny", "No thoughts", "Eyes", "#252e2b"],
+  ["sleepy", "Monday eyes", "Eyes", "#252e2b"],
   ["beak", "Signature bill", "Beaks", "#c5bd97"],
   ["bigbill", "Big business", "Beaks", "#c5bd97"],
   ["wing", "Folded wing", "Wings", "#839496"],
@@ -58,21 +58,21 @@ Object.assign(paths, {
   flathead:
     '<path d="M-83-25 L-61-47 -32-41 -16-55 3-42 Q79-54 89-6 Q96 49 7 52 Q-90 54-83-25Z"/>',
   wideeye:
-    '<ellipse rx="27" ry="32" fill="#fffbed"/><circle cy="1" r="6" fill="#252e2b"/><path d="M-24-39 Q0-47 24-39" fill="none"/>',
+    '<ellipse rx="27" ry="32" fill="#fffbed"/><circle cy="1" r="6" fill="currentColor"/><path d="M-24-39 Q0-47 24-39" fill="none"/>',
   angryeye:
-    '<path d="M-28-16 L28 3 Q20 32-17 19Z" fill="#faf5d8"/><circle cy="7" cx="2" r="7" fill="#252e2b"/><path d="M-32-18 L31 4" fill="none" stroke-width="7"/>',
+    '<path d="M-28-16 L28 3 Q20 32-17 19Z" fill="#faf5d8"/><circle cy="7" cx="2" r="7" fill="currentColor"/><path d="M-32-18 L31 4" fill="none" stroke-width="7"/>',
   closedeye:
-    '<path d="M-28 3 Q0 24 28 3 M-16 13 L-21 21 M0 18 V27 M16 13 L21 21" fill="none" stroke-width="4"/>',
+    '<path d="M-28 3 Q0 24 28 3 M-16 13 L-21 21 M0 18 V27 M16 13 L21 21" fill="none" stroke="currentColor" stroke-width="4"/>',
   sparkleeye:
-    '<ellipse rx="27" ry="29" fill="#fffbed"/><circle r="19" fill="#252e2b"/><path d="M-5-16 L-2-8 6-5 -2-2 -5 6 -8-2 -16-5 -8-8Z" fill="white" stroke="none"/><circle cx="9" cy="11" r="4" fill="white" stroke="none"/>',
+    '<ellipse rx="27" ry="29" fill="#fffbed"/><circle r="19" fill="currentColor"/><path d="M-5-16 L-2-8 6-5 -2-2 -5 6 -8-2 -16-5 -8-8Z" fill="white" stroke="none"/><circle cx="9" cy="11" r="4" fill="white" stroke="none"/>',
   eyeroll:
-    '<ellipse rx="27" ry="24" fill="#faf5d8"/><circle cy="-13" r="8" fill="#252e2b"/><path d="M-24 11 Q0 20 24 11" fill="none" stroke-width="4"/>',
+    '<ellipse rx="27" ry="24" fill="#faf5d8"/><circle cy="-13" r="8" fill="currentColor"/><path d="M-24 11 Q0 20 24 11" fill="none" stroke-width="4"/>',
   spiraleye:
-    '<circle r="26" fill="#fffbed"/><path d="M0 0 Q4-4 6 0 Q8 8 0 10 Q-11 11-12 0 Q-12-15 2-16 Q18-16 19 0 Q19 20 0 21" fill="none" stroke="#252e2b" stroke-width="3.5"/>',
+    '<circle r="26" fill="#fffbed"/><path d="M0 0 Q4-4 6 0 Q8 8 0 10 Q-11 11-12 0 Q-12-15 2-16 Q18-16 19 0 Q19 20 0 21" fill="none" stroke="currentColor" stroke-width="3.5"/>',
   hearteye:
     '<path d="M0 25 Q-34 3-21-16 Q-9-28 0-12 Q9-28 21-16 Q34 3 0 25Z"/><circle cx="-12" cy="-11" r="4" fill="white" stroke="none"/>',
   puppyeye:
-    '<ellipse rx="27" ry="28" fill="#fffbed"/><circle cy="4" r="16" fill="#252e2b"/><circle cx="-5" cy="-2" r="5" fill="white" stroke="none"/><circle cx="6" cy="10" r="2.5" fill="white" stroke="none"/><path d="M-18 22 Q0 31 18 22" fill="none" stroke="#82c5d5" stroke-width="4"/>',
+    '<ellipse rx="27" ry="28" fill="#fffbed"/><circle cy="4" r="16" fill="currentColor"/><circle cx="-5" cy="-2" r="5" fill="white" stroke="none"/><circle cx="6" cy="10" r="2.5" fill="white" stroke="none"/><path d="M-18 22 Q0 31 18 22" fill="none" stroke="#82c5d5" stroke-width="4"/>',
   stubbybill:
     '<path d="M-40-25 Q0-44 36-21 L43 18 Q18 40-35 22Z"/><path d="M-34 9 Q1 22 38 12" fill="none"/><circle cx="18" cy="-12" r="3" fill="#29332f"/>',
   longbill:
@@ -103,7 +103,7 @@ Object.assign(paths, {
   crown:
     '<path d="M-43-28 L-24-9 0-37 24-9 43-28 33 30 H-33Z"/><path d="M-32 17 H32" fill="none"/><circle cy="4" r="5" fill="#ee8660"/>',
   glasses:
-    '<circle cx="-33" r="26" fill="none" stroke-width="6"/><circle cx="33" r="26" fill="none" stroke-width="6"/><path d="M-7-4 Q0-12 7-4 M-60-5 H-74 M60-5 H74" fill="none" stroke-width="6"/>',
+    '<circle cx="-33" r="26" fill="none" stroke="currentColor" stroke-width="6"/><circle cx="33" r="26" fill="none" stroke="currentColor" stroke-width="6"/><path d="M-7-4 Q0-12 7-4 M-60-5 H-74 M60-5 H74" fill="none" stroke="currentColor" stroke-width="6"/>',
   partyhat:
     '<path d="M0-52 L34 34 Q0 46-34 34Z"/><path d="M-15-8 Q0-3 15-8 M-25 16 Q0 23 25 16" fill="none" stroke="#fffbed" stroke-width="5"/><circle cy="-56" r="9" fill="#fffbed"/>',
   mug: '<path d="M24-10 Q48-12 46 8 Q44 26 22 22" fill="none" stroke-width="13"/><path d="M24-10 Q48-12 46 8 Q44 26 22 22" fill="none" stroke="currentColor" stroke-width="6"/><path d="M-30-24 H30 L26 28 Q25 36 16 36 H-16 Q-25 36-26 28Z"/><ellipse cy="-24" rx="30" ry="6" fill="#6b4a36"/><path d="M-10-38 Q-18-47-10-55 Q-2-63-10-72 M10-38 Q2-47 10-55 Q18-63 10-72" fill="none" stroke-width="4" opacity=".45"/>',
@@ -136,14 +136,14 @@ defs.push(
   ["squarehead", "Blockhead", "Heads", "#aab6b4"],
   ["fluffyhead", "Static situation", "Heads", "#aab6b4"],
   ["flathead", "Wide thinker", "Heads", "#aab6b4"],
-  ["wideeye", "Seen too much", "Eyes", "#e4ddae"],
-  ["angryeye", "Deeply offended", "Eyes", "#e4ddae"],
-  ["closedeye", "Offline", "Eyes", "#e4ddae"],
-  ["sparkleeye", "Suspiciously happy", "Eyes", "#e4ddae"],
-  ["eyeroll", "Per my last email", "Eyes", "#e4ddae"],
-  ["spiraleye", "Too many meetings", "Eyes", "#e4ddae"],
+  ["wideeye", "Seen too much", "Eyes", "#252e2b"],
+  ["angryeye", "Deeply offended", "Eyes", "#252e2b"],
+  ["closedeye", "Offline", "Eyes", "#252e2b"],
+  ["sparkleeye", "Suspiciously happy", "Eyes", "#252e2b"],
+  ["eyeroll", "Per my last email", "Eyes", "#252e2b"],
+  ["spiraleye", "Too many meetings", "Eyes", "#252e2b"],
   ["hearteye", "Weirdly into it", "Eyes", "#e9585f"],
-  ["puppyeye", "Deadline extension?", "Eyes", "#e4ddae"],
+  ["puppyeye", "Deadline extension?", "Eyes", "#252e2b"],
   ["stubbybill", "Small talk", "Beaks", "#c5bd97"],
   ["longbill", "Long story", "Beaks", "#c5bd97"],
   ["hookbill", "The executive", "Beaks", "#c5bd97"],
@@ -603,5 +603,10 @@ try {
 } catch {
   items = starter();
 }
+// Eyes used to be saved with an unused beige default; now the colour is the
+// pupil, so keep older saved birds looking the same.
+for (const i of items)
+  if (i.color === "#e4ddae" && defs.find((d) => d[0] === i.type)[2] === "Eyes")
+    i.color = "#252e2b";
 library("Eyes");
 render();

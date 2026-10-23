@@ -79,6 +79,12 @@ Object.assign(paths, {
     '<path d="M-96-18 Q-59-50 51-27 Q87-24 102 18 Q66 41-90 20Z"/><path d="M-89 9 Q7 27 96 16" fill="none"/><circle cx="51" cy="-12" r="3" fill="#29332f"/>',
   hookbill:
     '<path d="M-66-25 Q2-56 59-22 Q85 5 62 56 L43 31 Q-16 39-62 20Z"/><path d="M-58 10 Q-5 26 45 14 L62 56" fill="none"/><circle cx="31" cy="-16" r="3" fill="#29332f"/>',
+  openbill:
+    '<path d="M-58 8 Q0 26 56 18 Q60 36 52 44 Q0 50-54 32Z" fill="#6e3434"/><ellipse cx="6" cy="38" rx="22" ry="7" fill="#d9715c" stroke="none"/><path d="M-54 30 Q0 46 52 42 Q58 58 38 66 L-44 54 Q-62 44-54 30Z"/><path d="M-66-22 Q-24-54 28-35 Q65-23 73 14 Q66 24 54 20 Q0 16-58 8 Q-72 0-66-22Z"/><path d="M42-22 Q53-10 51 3" fill="none"/><circle cx="31" cy="-18" r="3" fill="#29332f" stroke="none"/>',
+  smilebill:
+    '<path d="M-66-22 Q-24-54 28-35 Q65-23 73 20 Q67 48 37 47 L-49 30 Q-73 19-66-22Z"/><path d="M-54 4 Q0 22 58 4 Q8 50-54 4Z" fill="#6e3434"/><path d="M-50 7 Q0 23 54 7 Q2 30-50 7Z" fill="white" stroke-width="2"/><path d="M-22 15 V21 M0 17 V24 M22 15 V21" fill="none" stroke-width="2"/><ellipse cx="-56" cy="18" rx="9" ry="5" fill="#e9958b" stroke="none"/><ellipse cx="62" cy="18" rx="9" ry="5" fill="#e9958b" stroke="none"/><circle cx="31" cy="-18" r="3" fill="#29332f" stroke="none"/>',
+  whistlebill:
+    '<path d="M-20 10 L51 3 Q52 10 45 14Z" fill="#6e3434"/><path d="M-36 10 L45 14 Q46 28 26 32 Q0 36-35 22 Q-41 16-36 10Z"/><path d="M-40-25 Q0-44 36-21 Q55-4 51 3 L-36 10 Q-46-6-40-25Z"/><circle cx="14" cy="-14" r="3" fill="#29332f" stroke="none"/><path d="M75-10 V-36 Q85-32 84-22" fill="none" stroke-width="4"/><circle cx="69" cy="-10" r="6.5" fill="#29332f"/><path d="M92-50 V-80 L108-85 V-56" fill="none" stroke-width="4"/><circle cx="86" cy="-50" r="6.5" fill="#29332f"/><circle cx="102" cy="-56" r="6.5" fill="#29332f"/>',
   upwing:
     '<path d="M-22 65 Q-54 4-35-75 Q-26-94-17-63 L-9-91 Q3-101 5-65 L17-88 Q29-93 27-56 L39-65 Q53-64 37-18 L14 63Z"/><path d="M-15-32 L-6 35 M8-30 L2 36" fill="none" opacity=".4"/>',
   tinywing: '<path d="M-22-28 Q20-38 34-2 L24 26 15 10 7 31 -3 10 -16 22Z"/>',
@@ -121,6 +127,9 @@ defs.push(
   ["stubbybill", "Small talk", "Beaks", "#c5bd97"],
   ["longbill", "Long story", "Beaks", "#c5bd97"],
   ["hookbill", "The executive", "Beaks", "#c5bd97"],
+  ["openbill", "Has opinions", "Beaks", "#c5bd97"],
+  ["smilebill", "Forced smile", "Beaks", "#c5bd97"],
+  ["whistlebill", "Innocent whistle", "Beaks", "#c5bd97"],
   ["upwing", "I have concerns", "Wings", "#839496"],
   ["tinywing", "Tiny effort", "Wings", "#839496"],
   ["pointwing", "Over there", "Wings", "#839496"],

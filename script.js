@@ -638,3 +638,6 @@ for (const i of items)
     i.color = "#252e2b";
 library("Eyes");
 render();
+// Offline support and "Add to Home Screen". Skipped when opened as a local file.
+if ("serviceWorker" in navigator && location.protocol !== "file:")
+  navigator.serviceWorker.register("sw.js").catch(() => {});
